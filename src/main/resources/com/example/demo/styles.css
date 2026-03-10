@@ -1,0 +1,65 @@
+.root-container {
+    -fx-background-color: #1a1a2e;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e0e0ff;
+    -fx-padding: 0 0 8 0;
+}
+
+.control-label {
+    -fx-text-fill: #a0a8d0;
+    -fx-font-size: 13px;
+}
+
+.file-label {
+    -fx-text-fill: #7ec8e3;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+.btn-primary {
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 8 18 8 18;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #6366f1;
+}
+
+.output-area {
+    -fx-control-inner-background: #0f0f23;
+    -fx-text-fill: #c8f7c5;
+    -fx-font-family: "Consolas", monospace;
+    -fx-font-size: 13px;
+    -fx-border-color: #4f46e5;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.chart-bar {
+    -fx-bar-fill: #6366f1;
+}
+
+.chart-plot-background {
+    -fx-background-color: #0f0f23;
+}
+
+.chart-title {
+    -fx-text-fill: #e0e0ff;
+}
+
+.axis-label {
+    -fx-text-fill: #a0a8d0;
+}
+
+.axis {
+    -fx-tick-label-fill: #a0a8d0;
+}

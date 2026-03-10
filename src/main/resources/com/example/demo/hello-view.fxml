@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo.WeatherController"
+      spacing="12" styleClass="root-container">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <!-- Title -->
+    <Label text="🌤 Weather Data Analyzer" styleClass="title-label"/>
+
+    <!-- File load row -->
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="📂 Load CSV File" onAction="#handleLoadFile" styleClass="btn-primary"/>
+        <Label fx:id="fileLabel" text="No file loaded." styleClass="file-label"/>
+    </HBox>
+
+    <!-- Controls row -->
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Label text="Month:" styleClass="control-label"/>
+        <ComboBox fx:id="monthCombo" prefWidth="140"/>
+        <Label text="Threshold (°C):" styleClass="control-label"/>
+        <TextField fx:id="thresholdField" prefWidth="80"/>
+        <Button text="🔍 Analyze" onAction="#handleAnalyze" styleClass="btn-primary"/>
+    </HBox>
+
+    <!-- Chart -->
+    <BarChart fx:id="tempChart" prefHeight="240" animated="true">
+        <xAxis><CategoryAxis label="Month"/></xAxis>
+        <yAxis><NumberAxis label="Avg Temp (°C)"/></yAxis>
+    </BarChart>
+
+    <!-- Output -->
+    <Label text="Analysis Output:" styleClass="control-label"/>
+    <TextArea fx:id="outputArea" prefHeight="200" editable="false" wrapText="true" styleClass="output-area"/>
+
+</VBox>
